@@ -1,0 +1,59 @@
+intents:
+  - greet
+  - goodbye
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - jvm_details
+  - inform_environment
+  - inform_server
+  - thanks
+
+entities:
+  - server 
+  - environment
+
+slots:
+  server:
+    type: text
+  environment:
+    type: text
+  status:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am an Operations Bot , still under construction."
+
+  utter_how_can_i_help:
+  - text: "Hello,i am operations Bot ,I can help you for restart or to know status of jvms"
+  - text: "Hello , i am operation bot how can i help you?"
+  utter_ask_environment:
+  - text: "specify the environment please?"
+  utter_ask_server_name:
+  - text: "specify the server name please?"
+
+actions:
+- action_enquire_status
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
